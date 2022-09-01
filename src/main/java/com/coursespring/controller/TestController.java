@@ -54,7 +54,6 @@ public class TestController {
 
     @GetMapping("/props")
     public String props(){
-
         return "Hostname:" + configProperties.getHostName() + "|" + "HostPort:" + configProperties.getHostPort() + "|" + "Email Destino:" + configProperties.getEmailDest() + "|" + "Email Origem:" + configProperties.getEmailOrigin();
     }
 }
