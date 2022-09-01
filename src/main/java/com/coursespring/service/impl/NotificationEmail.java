@@ -1,6 +1,6 @@
 package com.coursespring.service.impl;
 
-import com.file.manipulationfile.service.Notificate;
+import com.coursespring.service.Notificate;
 import org.springframework.stereotype.Component;
 
 @Component

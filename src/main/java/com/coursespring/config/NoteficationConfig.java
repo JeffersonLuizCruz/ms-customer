@@ -1,8 +1,8 @@
 package com.coursespring.config;
 
 import com.coursespring.model.DocumentCSV;
-import com.coursespring.model.NotificationSMS;
 import com.coursespring.service.Notificate;
+import com.coursespring.service.impl.NotificationSMS;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
