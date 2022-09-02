@@ -54,6 +54,13 @@ public class TestController {
 
     @GetMapping("/props")
     public String props(){
-        return "Hostname:" + configProperties.getHostName() + "|" + "HostPort:" + configProperties.getHostPort() + "|" + "Email Destino:" + configProperties.getEmailDest() + "|" + "Email Origem:" + configProperties.getEmailOrigin();
+        String concatStr = "Hostname:" + configProperties.getHostName() + "|"
+                + "HostPort:" + configProperties.getHostPort() + "|"
+                + "Email Destino:" + configProperties.getNotificationEmailDest() + "|"
+                + "Email Origem:" + configProperties.getNotificationEmailOrigin() + "|"
+                + "Tipo de perfil Dev: " + configProperties.getProfileDevDevelopment() + "|"
+                + "Tipo de Perfil Prod: " + configProperties.getProfileProdProduction();
+
+        return concatStr;
     }
 }

@@ -1,8 +1,8 @@
 package com.coursespring.model;
 
 import lombok.Data;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
 import org.springframework.stereotype.Component;
 
 import java.io.Serializable;
@@ -16,9 +16,10 @@ public class ConfigProperties implements Serializable {
     private String hostName;
     private Integer hostPort;
 
-    @Value("${notification.email.dest}")
-    private String emailDest;
+    private String notificationEmailDest;
 
-    @Value("${notification.email.origin}")
-    private String emailOrigin;
+    private String notificationEmailOrigin;
+
+    private String profileDevDevelopment;
+    private String profileProdProduction;
 }
