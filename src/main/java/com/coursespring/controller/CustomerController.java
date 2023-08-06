@@ -1,5 +1,6 @@
 package com.coursespring.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,7 +18,7 @@ import com.coursespring.service.CustomerService;
 @RequestMapping("/customers")
 public class CustomerController {
 
-	private CustomerService customerService;
+	@Autowired private CustomerService customerService;
 	
 	@PostMapping
 	public ResponseEntity<Customer> save(@RequestBody Customer customer){
