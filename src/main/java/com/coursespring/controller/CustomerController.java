@@ -14,7 +14,9 @@ import org.springframework.web.bind.annotation.RestController;
 import com.coursespring.model.Customer;
 import com.coursespring.service.CustomerService;
 
-@RestController
+import lombok.extern.slf4j.Slf4j;
+
+@RestController @Slf4j
 @RequestMapping("/customers")
 public class CustomerController {
 
@@ -37,6 +39,7 @@ public class CustomerController {
 	
 	@GetMapping("/find")
 	public String find() {
+		log.info("Obtendo status da instância do serviço cliente");
 		return "Hello World";
 	}
 }
