@@ -32,7 +32,7 @@ public class CustomerController {
 		return ResponseEntity.ok(customerService.findById(id));
 	}
 	
-	@GetMapping
+	@GetMapping(params = "cpf")
 	public ResponseEntity<Customer> findByCpf(@RequestParam(name = "cpf") String cpf){
 		return ResponseEntity.ok(customerService.findByCpf(cpf));
 	}

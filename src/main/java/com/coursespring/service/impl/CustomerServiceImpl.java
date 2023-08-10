@@ -29,6 +29,9 @@ public class CustomerServiceImpl implements CustomerService{
 	
 	@Override
 	public Customer findByCpf(String cpf) {
+		Customer orElseThrow = customerRepository.findByCpf(cpf)
+		.orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Not Found"));
+		System.out.println(orElseThrow);
 		return customerRepository.findByCpf(cpf)
 				.orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Not Found"));
 	}
